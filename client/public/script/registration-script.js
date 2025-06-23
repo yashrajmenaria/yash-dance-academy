@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const tbody = document.querySelector('#registrationTable tbody');
 
-    fetch('http://localhost:5000/api/admin/registrations', {
+    fetch('/api/admin/registrations', {
         headers: {
             'Authorization': `Bearer ${token}`
         }

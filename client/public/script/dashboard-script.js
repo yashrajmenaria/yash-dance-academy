@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const growthPercentageP = document.getElementById('growthPercentage');
 
     // Fetch admin name
-    fetch('http://localhost:5000/api/admin/dashboard', {
+    fetch('/api/admin/dashboard', {
         headers: { 'Authorization': `Bearer ${token}` }
     })
     .then(res => {
@@ -41,7 +41,7 @@ function refreshStats() {
     const newRegistrationsP = document.getElementById('newRegistrations');
     const growthPercentageP = document.getElementById('growthPercentage');
 
-    fetch('http://localhost:5000/api/admin/stats', {
+    fetch('/api/admin/stats', {
         headers: { 'Authorization': `Bearer ${token}` }
     })
     .then(res => {
