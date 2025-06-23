@@ -1,0 +1,385 @@
+/* Professional Contact Form Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Override body styles for contact page to work with fixed navbar/footer */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: calc(100vh - 125px); /* Account for navbar and footer */
+  margin: 0;
+  padding: 20px 20px 0 20px; /* Reduced bottom padding since footer is fixed */
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto 40px auto; /* Increased top margin to move form down */
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.form-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.form-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.form-header .subtitle {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.myForm {
+  padding: 40px;
+}
+
+.form-section {
+  margin-bottom: 40px;
+}
+
+.form-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 24px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e2e8f0;
+  position: relative;
+}
+
+.form-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #a0aec0;
+}
+
+.phone-input-group {
+  display: flex;
+  gap: 12px;
+}
+
+.phone-input-group select {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.phone-input-group input {
+  flex: 1;
+}
+
+/* Radio Button Styles */
+.radio-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.radio-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.radio-option:hover {
+  border-color: #667eea;
+  background: #f7fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.radio-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cbd5e0;
+  border-radius: 50%;
+  margin-right: 12px;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.radio-option input[type="radio"]:checked + .radio-custom {
+  border-color: #667eea;
+  background: #667eea;
+}
+
+.radio-option input[type="radio"]:checked + .radio-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+}
+
+.radio-option input[type="radio"]:checked ~ .radio-label {
+  color: #2d3748;
+}
+
+.radio-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.radio-label strong {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 1rem;
+}
+
+.radio-label small {
+  color: #718096;
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+/* File Upload Styles */
+.file-upload-group {
+  border: 2px dashed #cbd5e0;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.file-upload-group:hover {
+  border-color: #667eea;
+  background: #f7fafc;
+}
+
+.file-upload-group input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.file-upload-info {
+  margin-top: 16px;
+}
+
+.file-upload-info p {
+  margin: 8px 0;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.file-upload-info p.small {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+/* Button Styles */
+.form-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 2px solid #e2e8f0;
+}
+
+.btn {
+  padding: 14px 32px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 160px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: #f7fafc;
+  color: #4a5568;
+  border: 2px solid #e2e8f0;
+}
+
+.btn-secondary:hover {
+  background: #edf2f7;
+  border-color: #cbd5e0;
+  transform: translateY(-2px);
+}
+
+/* Success Message */
+.success-message {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  padding: 20px 24px;
+  margin: 24px 40px;
+  border-radius: 12px;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+  border: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px 10px 0 10px; /* Adjusted for fixed navbar/footer */
+  }
+  
+  .container {
+    margin: 30px auto 30px auto; /* Adjusted top margin for mobile */
+    border-radius: 12px;
+  }
+  
+  .form-header {
+    padding: 30px 20px;
+  }
+  
+  .form-header h1 {
+    font-size: 2rem;
+  }
+  
+  .myForm {
+    padding: 30px 20px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .radio-group {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .phone-input-group {
+    flex-direction: column;
+  }
+  
+  .phone-input-group select {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 5px 5px 0 5px; /* Further reduced padding on small screens */
+  }
+  
+  .container {
+    margin: 20px auto 20px auto; /* Further reduced margins for small screens */
+  }
+  
+  .form-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .form-header .subtitle {
+    font-size: 1rem;
+  }
+  
+  .myForm {
+    padding: 20px 16px;
+  }
+  
+  .form-section h3 {
+    font-size: 1.1rem;
+  }
+}

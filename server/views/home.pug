@@ -1,0 +1,157 @@
+extends base.pug
+
+block scripts
+  script(src='/static/index.js')
+block style
+  style 
+    include ../static/style.css
+
+block content
+  // Hero Section
+  section.hero-section
+    .hero-content
+      h1.hero-title Welcome to Yash Dance Academy
+      p.hero-subtitle Where passion meets rhythm, and dreams take flight through dance
+      .hero-cta
+        a.btn.btn-primary(href="/contact") Start Your Journey
+        a.btn.btn-secondary(href="/about") Learn More
+      .hero-stats
+        .stat-item
+          .stat-number 8+
+          .stat-label Years of Excellence
+        .stat-item
+          .stat-number 500+
+          .stat-label Students Trained
+        .stat-item
+          .stat-number 15+
+          .stat-label Dance Styles
+
+  // Mission Section
+  section.mission-section
+    .container
+      .section-header
+        h2 Our Mission
+        p Empowering individuals through the art of dance, one step at a time
+      
+      .mission-cards
+        .mission-card
+          h3 Perfect Your Dance
+          p Master the fundamentals and advanced techniques with our comprehensive training programs designed for all skill levels
+          .card-image
+            img(src="/static/img/img-1.webp", alt="Perfect your dance")
+        
+        .mission-card
+          h3 Dance Your Way
+          p Express yourself freely in a supportive environment where creativity knows no bounds and individuality is celebrated
+          .card-image
+            img(src="/static/img/img-2.png", alt="Dance your way")
+        
+        .mission-card
+          h3 Expert Teaching
+          p Learn from certified professionals with years of industry experience, dedicated to nurturing your dance journey
+          .card-image
+            img(src="/static/img/img-3.png", alt="Expert teaching")
+
+  // Dance Styles Section
+  section.dance-styles
+    .container
+      .section-header
+        h2 Dance Styles We Offer
+        p Discover your passion with our diverse range of dance styles
+      
+      .styles-grid
+        .style-card
+          h3 Classical
+          p Traditional Indian dance forms with rich cultural heritage
+        .style-card
+          h3 Contemporary
+          p Modern dance expressions with artistic freedom
+        .style-card
+          h3 Hip-Hop
+          p Urban dance culture with high energy and rhythm
+        .style-card
+          .style-icon
+          h3 Modern
+          p Contemporary styles with innovative choreography
+
+  // Why Choose Us Section
+  section.why-choose-us
+    .container
+      .section-header
+        h2 Why Choose Yash Dance Academy?
+        p Experience the difference that professional training makes
+      
+      .features-grid
+        .feature-item
+          .feature-icon 🎓
+          h3 Professional Training
+          p Certified instructors with years of experience
+        .feature-item
+          .feature-icon 🏆
+          h3 Performance Opportunities
+          p Regular showcases and competitions
+        .feature-item
+          .feature-icon 🎵
+          h3 Modern Facilities
+          p State-of-the-art studios with professional equipment
+        .feature-item
+          .feature-icon 👥
+          h3 Small Class Sizes
+          p Personalized attention for every student
+        .feature-item
+          .feature-icon 📅
+          h3 Flexible Schedule
+          p Classes available throughout the week
+        .feature-item
+          .feature-icon 🎭
+          h3 Multiple Styles
+          p Learn various dance forms under one roof
+
+  // Testimonials Section
+  section.testimonials-section
+    .container
+      .section-header
+        h2 What Our Students Say
+        p Real stories from our dance community
+      
+      .testimonials-grid
+        .testimonial-card
+          .quote-icon ❝
+          p.testimonial-text
+            | One of the best dance academies in the city. The instructors are incredibly patient, 
+            | talented, and passionate about teaching. I've seen remarkable improvement in
+            | my technique and confidence in just a few months.
+          .testimonial-author
+            .author-name Mohit Kumar
+            .author-info Advanced Student
+          .rating ⭐⭐⭐⭐⭐
+        
+        .testimonial-card
+          .quote-icon ❝
+          p.testimonial-text
+            | Whether you're a beginner or advanced dancer, this academy offers something for everyone.
+            | The environment is supportive and fun, and every class leaves me inspired to improve.
+          .testimonial-author
+            .author-name Rakesh Shetty
+            .author-info Intermediate Student
+          .rating ⭐⭐⭐⭐⭐
+        
+        .testimonial-card
+          .quote-icon ❝
+          p.testimonial-text
+            | The energy here is absolutely amazing! The teachers are not just instructors but mentors.
+            | I would highly recommend this academy to anyone who wants to learn dance the right way.
+          .testimonial-author
+            .author-name Priya Sharma
+            .author-info Beginner Student
+          .rating ⭐⭐⭐⭐⭐
+
+  // Call to Action Section
+  section.cta-section
+    .container
+      .cta-content
+        h2 Ready to Start Your Dance Journey?
+        p Join hundreds of students who have discovered their passion for dance with us
+        .cta-buttons
+          a.btn.btn-primary(href="/contact") Enroll Now
+          a.btn.btn-outline(href="/about") Learn More About Us

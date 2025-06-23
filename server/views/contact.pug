@@ -1,0 +1,126 @@
+extends base.pug
+
+block scripts
+  script(src='/static/index.js')
+
+block style
+  style 
+    include ../static/style.css
+    include ../static/styleContact.css 
+
+block content
+  .container
+    .form-header
+      h1 Contact Us
+      p.subtitle Join our dance community and start your journey today
+      
+    if successMsg
+      div.success-message= successMsg
+      
+    form(action="/contact", method="post", enctype="multipart/form-data", class="myForm")
+      .form-section
+        h3 Personal Information
+        
+        .form-row
+          .form-group
+            label(for="title") Title *
+            select(name="title", id="title", required)
+              option(value="") Select a Title
+              option(value="Mr") Mr
+              option(value="Ms") Ms
+              option(value="Mrs") Mrs
+          
+          .form-group
+            label(for="name") Full Name *
+            input(type="text", name="name", id="name", placeholder="Enter your full name", required)
+
+        .form-row
+          .form-group
+            label(for="age") Age *
+            input(type="number", name="age", id="age", placeholder="Enter your age", min="1", max="100", required)
+          
+          .form-group
+            label(for="email") Email Address *
+            input(type="email", name="email", id="email", placeholder="Enter your email address", required)
+
+        .form-group
+          label(for="altEmail") Alternative Email
+          input(type="email", name="altEmail", id="altEmail", placeholder="Alternative email (optional)")
+
+        .form-group
+          label(for="phone") Mobile Number *
+          .phone-input-group
+            select(name="countryCode", id="countryCode", required)
+              option(value="+91") 🇮🇳 +91
+            input(type="tel", name="phone", id="phone", placeholder="Enter your phone number", required)
+
+      .form-section
+        h3 Dance Experience
+        
+        .form-group
+          label Experience Level *
+          .radio-group
+            label.radio-option
+              input(type="radio", name="experience", value="beginner", required)
+              span.radio-custom
+              span.radio-label
+                strong Beginner
+                small 0–1 years of experience
+            label.radio-option
+              input(type="radio", name="experience", value="intermediary")
+              span.radio-custom
+              span.radio-label
+                strong Intermediate
+                small 2–5 years of experience
+            label.radio-option
+              input(type="radio", name="experience", value="advanced")
+              span.radio-custom
+              span.radio-label
+                strong Advanced
+                small 5+ years of experience
+
+      .form-section
+        h3 Dance Style Preference
+        
+        .form-group
+          label Dance Style You Want to Learn *
+          .radio-group
+            label.radio-option
+              input(type="radio", name="style", value="Classical", required)
+              span.radio-custom
+              span.radio-label
+                strong Classical
+                small Traditional Indian dance forms
+            label.radio-option
+              input(type="radio", name="style", value="Modern")
+              span.radio-custom
+              span.radio-label
+                strong Modern
+                small Contemporary dance styles
+            label.radio-option
+              input(type="radio", name="style", value="Hip-Hop")
+              span.radio-custom
+              span.radio-label
+                strong Hip-Hop
+                small Urban dance culture
+            label.radio-option
+              input(type="radio", name="style", value="Contemporary")
+              span.radio-custom
+              span.radio-label
+                strong Contemporary
+                small Expressive modern dance
+
+      .form-section
+        h3 Additional Information
+        
+        .form-group
+          label(for="danceVideo") Dance Video Sample
+          .file-upload-group
+            input(type="file", name="danceVideo", id="danceVideo", accept="video/*")
+            .file-upload-info
+              p Upload a 2–3 minute dance video (optional)
+              p.small Supported formats: MP4, MOV, AVI (Max 50MB)
+
+      .form-actions
+        button(type="submit", class="btn btn-primary") Submit Application
+        button(type="reset", class="btn btn-secondary") Reset Form

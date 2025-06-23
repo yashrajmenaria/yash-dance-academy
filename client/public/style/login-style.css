@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    color: white;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.5s;
+}
+
+.login-container:hover {
+    transform: perspective(1000px) rotateY(1deg);
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.5);
+}
+
+.error {
+    color: #ff6b6b;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 500;
+    height: 20px;
+}

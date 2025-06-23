@@ -1,0 +1,149 @@
+extends base.pug
+
+block scripts
+  script(src='/static/index.js')
+
+block style
+  style
+    include ../static/style.css
+    include ../static/styleAbout.css
+
+block content
+  .about-hero
+    .hero-content
+      h1 About Our Academy
+      p.hero-subtitle Where passion meets rhythm, and dreams take flight through dance
+      .hero-stats
+        .stat-item
+          .stat-number 8+
+          .stat-label Years of Excellence
+        .stat-item
+          .stat-number 500+
+          .stat-label Students Trained
+        .stat-item
+          .stat-number 15+
+          .stat-label Dance Styles
+
+  .about-content
+    .container
+      .mission-section
+        h2 Our Mission
+        p
+          | Founded in 2015, Yash Dance Academy has grown from strength to strength 
+          | as a place where passion meets rhythm. Our mission is simple - to inspire, 
+          | educate and spread the joy of dance to people of all ages and backgrounds. 
+          | We believe that dance is not just a form of expression, but a way of life 
+          | that brings people together and creates lasting memories.
+
+      .values-section
+        h2 Our Values
+        .values-grid
+          .value-card
+            .value-icon 🎯
+            h3 Excellence
+            p We strive for excellence in every performance, class, and interaction
+          .value-card
+            .value-icon ❤️
+            h3 Passion
+            p Dance is our passion, and we share that passion with every student
+          .value-card
+            .value-icon 🤝
+            h3 Community
+            p Building a supportive community where everyone feels welcome
+          .value-card
+            .value-icon 🌟
+            h3 Innovation
+            p Constantly evolving and embracing new dance styles and techniques
+
+  .team-section
+    .container
+      .section-header
+        h2 Meet Our Team
+        p Our experienced instructors are dedicated to helping you achieve your dance dreams
+      
+      .team-grid
+        .team-member
+          .member-image
+            img(src="/static/img/yash.jpg", alt="Yash Raj")
+            .social-links
+              a(href="#", aria-label="Instagram") 📷
+              a(href="#", aria-label="LinkedIn") 💼
+          .member-info
+            h3.name Yash Raj
+            .designation Founder & Lead Choreographer
+            p.description
+              | Over 10 years of experience in multiple dance styles. 
+              | Yash's passion for dance and innovative teaching methods 
+              | have inspired hundreds of students to pursue their dreams.
+          .member-skills
+            .skill-tag Classical
+            .skill-tag Contemporary
+            .skill-tag Hip-Hop
+      
+        .team-member
+          .member-image
+            img(src="/static/img/paawan.jpg", alt="Paawan Haathiwala")
+            .social-links
+              a(href="#", aria-label="Instagram") 📷
+              a(href="#", aria-label="LinkedIn") 💼
+          .member-info
+            h3.name Paawan Haathiwala
+            .designation Contemporary Dance Instructor
+            p.description
+              | Known for creative choreography and dynamic teaching. 
+              | Paawan brings a unique blend of contemporary techniques 
+              | and artistic expression to every class.
+          .member-skills
+            .skill-tag Contemporary
+            .skill-tag Modern
+            .skill-tag Jazz
+
+        .team-member
+          .member-image
+            img(src="/static/img/siddak.jpg", alt="Siddak Rajpal")
+            .social-links
+              a(href="#", aria-label="Instagram") 📷
+              a(href="#", aria-label="LinkedIn") 💼
+          .member-info
+            h3.name Siddak Rajpal
+            .designation Hip-Hop & Street Style Coach
+            p.description
+              | Bringing energy and urban flair to every class. 
+              | Siddak's expertise in street dance styles and 
+              | infectious energy make learning fun and engaging.
+          .member-skills
+            .skill-tag Hip-Hop
+            .skill-tag Street Dance
+            .skill-tag Breaking
+
+  .academy-features
+    .container
+      .section-header
+        h2 Why Choose Yash Dance Academy?
+        p Discover what makes us the preferred choice for dance education
+      
+      .features-grid
+        .feature-card
+          .feature-icon 🎓
+          h3 Professional Training
+          p Learn from certified instructors with years of industry experience
+        .feature-card
+          .feature-icon 🏆
+          h3 Performance Opportunities
+          p Regular showcases and competitions to showcase your talent
+        .feature-card
+          .feature-icon 🎵
+          h3 Modern Facilities
+          p State-of-the-art dance studios with professional sound systems
+        .feature-card
+          .feature-icon 👥
+          h3 Small Class Sizes
+          p Personalized attention with limited students per class
+        .feature-card
+          .feature-icon 📅
+          h3 Flexible Schedule
+          p Classes available throughout the week to fit your schedule
+        .feature-card
+          .feature-icon 🎭
+          h3 Multiple Styles
+          p Learn classical, contemporary, hip-hop, and more under one roof

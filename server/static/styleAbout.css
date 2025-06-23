@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Override body styles for about page to work with fixed navbar/footer */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.about-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%),
+              url("/static/img/about-bg.webp") center center / cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 80px 20px 60px 20px;
+  margin-top: 98px; /* Account for fixed navbar */
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 0 0 50px 0;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+  color: #ffd700;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+/* Content Sections */
+.about-content {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mission-section {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.mission-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 30px 0;
+  position: relative;
+}
+
+.mission-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.mission-section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #4a5568;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Values Section */
+.values-section {
+  margin-bottom: 80px;
+}
+
+.values-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  text-align: center;
+  margin: 0 0 50px 0;
+  position: relative;
+}
+
+.values-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.value-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.value-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 15px 0;
+}
+
+.value-card p {
+  color: #718096;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Team Section */
+.team-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 20px 0;
+  position: relative;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #718096;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.team-member {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.member-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover .member-image img {
+  transform: scale(1.05);
+}
+
+.social-links {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-member:hover .social-links {
+  opacity: 1;
+}
+
+.social-links a {
+  background: rgba(255, 255, 255, 0.9);
+  color: #667eea;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #667eea;
+  color: white;
+  transform: scale(1.1);
+}
+
+.member-info {
+  padding: 30px;
+}
+
+.member-info .name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 8px 0;
+}
+
+.member-info .designation {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #667eea;
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.member-info .description {
+  color: #718096;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+.member-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: #f7fafc;
+  color: #667eea;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid #e2e8f0;
+}
+
+/* Academy Features */
+.academy-features {
+  padding: 80px 0;
+  background: #f8fafc;
+  margin-bottom: 27px; /* Account for fixed footer */
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 15px 0;
+}
+
+.feature-card p {
+  color: #718096;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .about-hero {
+    padding: 60px 20px 40px 20px;
+    min-height: 50vh;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-stats {
+    gap: 40px;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .about-content,
+  .team-section,
+  .academy-features {
+    padding: 60px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .mission-section h2,
+  .values-section h2,
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-hero {
+    padding: 40px 15px 30px 15px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .about-content,
+  .team-section,
+  .academy-features {
+    padding: 40px 0;
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+  
+  .mission-section h2,
+  .values-section h2,
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+  
+  .value-card,
+  .feature-card {
+    padding: 30px 20px;
+  }
+  
+  .member-info {
+    padding: 20px;
+  }
+}
